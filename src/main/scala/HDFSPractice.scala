@@ -19,8 +19,8 @@ object HDFSPractice extends App {
   val odsPath = s"$hdfsPath$odsDir"
 
   val res: Try[String] = Try {
-  // Получение содержимого директории /stage/
-  val stageContent: Array[FileStatus] = fs.listStatus(new Path(stagePath))
+    // Получение содержимого директории /stage/
+    val stageContent: Array[FileStatus] = fs.listStatus(new Path(stagePath))
 
     // Получение путей для поддиректорий /stage/
     val stageDirList: List[String] =
